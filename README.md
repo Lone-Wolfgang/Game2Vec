@@ -82,14 +82,3 @@ Models are downloaded from HuggingFace Hub on first run and cached by `@st.cache
 4. **Rankers** — the ⚙️ expander lets you toggle individual rankers on/off. The Search button re-appears whenever tags or ranker selection diverge from the last search.
 5. **Results** — the top recommendation is shown with review snippets and an AI-generated pitch. Click *Generate* to produce the pitch; click a card in "You may also like" to pin it.
 
-## Requirements
-
-```
-streamlit
-pandas
-psycopg2-binary
-sentence-transformers
-transformers
-torch
-accelerate
-```
