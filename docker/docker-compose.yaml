@@ -1,0 +1,22 @@
+version: "3.9"
+
+services:
+  steamdb:
+    image: pgvector/pgvector:pg15
+    container_name: steamdb
+    restart: unless-stopped
+
+    environment:
+      POSTGRES_PASSWORD: postgres
+
+    ports:
+      - "5433:5432"
+
+    volumes:
+      - steamdb_data:/var/lib/postgresql/data
+
+    shm_size: 32gb
+
+volumes:
+  steamdb_data:
+    external: true
